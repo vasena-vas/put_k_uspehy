@@ -1,8 +1,6 @@
-import react from '@vitejs/plugin-react'
-import { defineConfig } from 'vite'
-
-// https://vite.dev/config/
-export default defineConfig({
-  plugins: [react()],
-base: '/put_k_uspehy/',
-})
+import { defineConfig } from 'vite';
+export default defineConfig({ 
+  base: '/put_k_uspehy/', // 👈 Обязательно добавляем слэши по краям!
+  esbuild: { jsx: 'automatic' }, 
+  server: { host: '0.0.0.0', allowedHosts: true } 
+});
